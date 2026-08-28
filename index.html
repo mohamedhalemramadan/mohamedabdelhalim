@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mohamed Abdelhalim Ramadan Abdelhalim — Full Stack .NET Developer specializing in ASP.NET Core, Web API, MVC, React.js, SQL Server, Entity Framework Core, JWT and role-based applications." />
+  <meta name="theme-color" content="#07111f" />
+  <meta property="og:title" content="Mohamed Abdelhalim | Full Stack .NET Developer" />
+  <meta property="og:description" content="Portfolio of Mohamed Abdelhalim, a Full Stack .NET Developer building API-driven applications with ASP.NET Core, React.js, SQL Server and Entity Framework Core." />
+  <title>Mohamed Abdelhalim | Full Stack .NET Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07111f; --bg-2:#0a1729; --panel:#0d1c31; --paper:#ffffff; --surface:#f4f7fb;
+      --text:#142033; --muted:#637189; --line:#dfe7f0; --cyan:#58d6ff; --green:#55e0af;
+      --blue:#4f7cff; --navy:#07111f; --shadow:0 24px 70px rgba(22,43,76,.12);
+      --radius-lg:28px; --radius-md:18px; --max:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:"Manrope",Arial,sans-serif;background:var(--surface);color:var(--text);line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none} button{font:inherit}.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .skip-link{position:fixed;top:-50px;left:14px;z-index:1000;background:white;color:#07111f;padding:10px 14px;border-radius:10px}.skip-link:focus{top:14px}
+    header{position:sticky;top:0;z-index:50;background:rgba(7,17,31,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;color:white;font-weight:800;letter-spacing:-.03em}.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--green));color:#07111f;font:800 13px/1 "DM Mono",monospace}.nav-links{display:flex;align-items:center;gap:22px;color:#c4d0e0;font-size:13px;font-weight:700}.nav-links a:hover{color:white}.nav-cta{padding:10px 14px;border-radius:10px;border:1px solid rgba(88,214,255,.4);color:white!important}.menu-toggle{display:none;background:transparent;border:0;color:white;padding:8px}
+
+    .hero{position:relative;isolation:isolate;overflow:hidden;color:white;background:radial-gradient(circle at 18% 18%,rgba(79,124,255,.35),transparent 28%),radial-gradient(circle at 82% 25%,rgba(88,214,255,.20),transparent 24%),linear-gradient(135deg,#07111f 0%,#0a1830 55%,#102849 100%);padding:92px 0 82px}
+    .hero:after{content:"";position:absolute;z-index:-1;width:520px;height:520px;border-radius:50%;right:-240px;bottom:-300px;border:1px solid rgba(88,214,255,.22);box-shadow:0 0 0 70px rgba(88,214,255,.035),0 0 0 140px rgba(88,214,255,.025)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border-radius:999px;background:rgba(85,224,175,.1);color:#aef8de;font:500 12px/1 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase}.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(85,224,175,.13)}
+    h1{font-size:clamp(44px,6.1vw,76px);line-height:1.04;letter-spacing:-.065em;margin:20px 0}.accent{display:block;color:var(--cyan)}.hero-copy{max-width:700px;margin:0;color:#bdcbe0;font-size:clamp(16px,1.8vw,19px);line-height:1.85}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 18px;border-radius:12px;font-weight:800;font-size:14px;transition:.2s}.btn-primary{background:linear-gradient(135deg,var(--cyan),var(--green));color:#07111f;box-shadow:0 15px 34px rgba(73,209,200,.18)}.btn-primary:hover{transform:translateY(-2px)}.btn-secondary{color:white;border:1px solid rgba(255,255,255,.19);background:rgba(255,255,255,.05)}.btn-secondary:hover{background:rgba(255,255,255,.1)}
+    .hero-note{display:flex;gap:10px;align-items:center;margin-top:24px;color:#8fa2bd;font:12px/1.5 "DM Mono",monospace}.hero-note svg{color:var(--green)}
+
+    .dev-card{position:relative;border:1px solid rgba(255,255,255,.13);border-radius:28px;padding:14px;background:linear-gradient(150deg,rgba(88,214,255,.18),rgba(13,28,49,.9));box-shadow:0 35px 100px rgba(0,0,0,.30);overflow:hidden}.terminal{min-height:435px;border-radius:20px;background:#06101e;border:1px solid rgba(255,255,255,.08);padding:22px;position:relative;overflow:hidden}.terminal:after{content:"";position:absolute;inset:auto -60px -120px auto;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(79,124,255,.28),transparent 65%)}
+    .terminal-top{display:flex;align-items:center;justify-content:space-between;color:#70839f;font:11px "DM Mono",monospace}.dots{display:flex;gap:7px}.dots i{width:9px;height:9px;border-radius:50%;background:#31435b}.code{margin-top:45px;font:13px/2 "DM Mono",monospace;color:#a8b7ca;white-space:pre-wrap}.code .k{color:#72ddff}.code .s{color:#63e3b2}.code .v{color:#89a4ff}.code .c{color:#60738d}.code-name{position:absolute;left:22px;right:22px;bottom:22px;padding:17px;border:1px solid rgba(255,255,255,.11);border-radius:16px;background:rgba(13,28,49,.72);backdrop-filter:blur(10px)}.code-name strong{display:block;font-size:18px;letter-spacing:-.04em}.code-name span{display:block;color:#99abc2;font:11px "DM Mono",monospace;margin-top:5px}.stack-float{position:absolute;right:28px;top:82px;display:flex;flex-direction:column;gap:8px}.stack-float span{padding:7px 10px;border-radius:999px;background:rgba(88,214,255,.09);border:1px solid rgba(88,214,255,.18);color:#bdefff;font:10px "DM Mono",monospace}
+
+    .proof{background:#fff;border-bottom:1px solid var(--line)}.proof-grid{min-height:116px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:center}.proof-item{display:flex;align-items:center;gap:12px}.proof-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#edf4ff;color:var(--blue);flex:0 0 auto}.proof-value{display:block;color:var(--navy);font-size:18px;font-weight:800;line-height:1.15;letter-spacing:-.035em}.proof-label{display:block;margin-top:4px;color:var(--muted);font-size:11px;font-weight:700}
+
+    section{padding:96px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:38px}.section-kicker{font:700 12px/1 "DM Mono",monospace;color:var(--blue);text-transform:uppercase;letter-spacing:.08em}h2{margin:12px 0 0;color:var(--navy);font-size:clamp(31px,4vw,48px);line-height:1.1;letter-spacing:-.055em}.section-lead{max-width:470px;margin:0;color:var(--muted);font-size:15px}
+
+    .about{background:linear-gradient(180deg,#f4f7fb 0%,#edf3fa 100%)}.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}.about-card,.availability-card{background:white;border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px;box-shadow:0 15px 35px rgba(23,48,92,.04)}.about-card p{margin:0;color:var(--muted);font-size:15px;line-height:1.9}.availability-card{background:linear-gradient(145deg,#0c1930,#102747);color:white;border-color:rgba(255,255,255,.08)}.availability-card h3{font-size:25px;letter-spacing:-.04em;margin:0 0 10px}.availability-card p{color:#b9c7da;margin:0 0 20px}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{padding:15px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09)}.mini span{display:block;color:#8ea3c0;font:10px "DM Mono",monospace;text-transform:uppercase}.mini b{display:block;margin-top:5px;font-size:13px}
+
+    .projects{background:#fff}.project-list{display:grid;gap:20px}.project{display:grid;grid-template-columns:.9fr 1.1fr;min-height:350px;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:#fff;transition:.25s}.project:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.project-visual{position:relative;min-height:310px;padding:28px;color:white;overflow:hidden}.project-visual.p1{background:linear-gradient(145deg,#0b455d,#133f79 55%,#1a6f91)}.project-visual.p2{background:linear-gradient(145deg,#4f2a84,#253f82 52%,#175f80)}.project-visual.p3{background:linear-gradient(145deg,#0c665a,#164d5c 52%,#123b6a)}.project-visual:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-120px;bottom:-180px;border:1px solid rgba(255,255,255,.25);box-shadow:0 0 0 40px rgba(255,255,255,.05),0 0 0 80px rgba(255,255,255,.035)}.project-micro{position:relative;z-index:2;font:11px "DM Mono",monospace;color:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:.08em}.project-visual h3{position:relative;z-index:2;font-size:29px;line-height:1.1;letter-spacing:-.055em;max-width:330px;margin:18px 0}.visual-code{position:absolute;left:28px;right:28px;bottom:28px;z-index:2;padding:16px;border-radius:14px;background:rgba(4,16,32,.43);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);font:11px/1.8 "DM Mono",monospace;color:#d8e8f8}.visual-code b{color:#7de7ff}.visual-code em{color:#77efbd;font-style:normal}.float-tags{position:absolute;right:22px;top:26px;z-index:3;display:flex;gap:7px;flex-wrap:wrap;max-width:220px;justify-content:flex-end}.float-tags span{padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);font:9px "DM Mono",monospace}.project-copy{padding:34px 38px;display:flex;flex-direction:column;justify-content:center}.project-index{color:var(--blue);font:700 11px "DM Mono",monospace;letter-spacing:.08em}.project-copy h3{margin:12px 0;color:var(--navy);font-size:26px;line-height:1.15;letter-spacing:-.05em}.project-copy p{margin:0;color:var(--muted);font-size:14px}.project-points{list-style:none;margin:18px 0 22px;padding:0;display:grid;gap:9px}.project-points li{position:relative;padding-left:21px;color:#40506a;font-size:13px}.project-points li:before{content:"";position:absolute;left:0;top:.58em;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(85,224,175,.16)}.stack{display:flex;flex-wrap:wrap;gap:8px}.stack span{padding:6px 9px;border-radius:999px;background:#f1f5fb;border:1px solid #e4ebf4;color:#536178;font:10px "DM Mono",monospace}
+
+    .skills{background:linear-gradient(180deg,#f4f7fb,#edf2f8)}.skill-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:20px}.education-board{display:grid;gap:15px}.edu-card{background:white;border:1px solid var(--line);border-radius:var(--radius-md);padding:23px}.edu-card .tag{font:10px "DM Mono",monospace;color:var(--blue);text-transform:uppercase}.edu-card h3{margin:9px 0 6px;font-size:18px;letter-spacing:-.03em}.edu-card p{margin:0;color:var(--muted);font-size:13px}.skill-board{background:#0c1b31;color:white;border-radius:var(--radius-lg);padding:30px;border:1px solid rgba(255,255,255,.06);box-shadow:0 28px 70px rgba(13,34,63,.18)}.skill-board h3{font-size:23px;margin:0 0 22px;letter-spacing:-.04em}.skill-columns{display:grid;grid-template-columns:1fr 1fr;gap:22px}.skill-group b{display:block;color:#91a6c2;font:10px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}.skill-group div{display:flex;flex-wrap:wrap;gap:8px}.skill-group span{padding:7px 9px;border-radius:9px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);color:#dce7f5;font-size:11px}
+
+    .workflow{background:#fff}.workflow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.flow-card{padding:24px;border:1px solid var(--line);border-radius:var(--radius-md);background:white}.flow-no{font:700 11px "DM Mono",monospace;color:var(--blue)}.flow-card h3{font-size:17px;margin:12px 0 7px;letter-spacing:-.03em}.flow-card p{margin:0;color:var(--muted);font-size:13px}
+
+    .contact{background:linear-gradient(135deg,#07111f,#0c1b34 55%,#123257);color:white;padding:82px 0}.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}.contact h2{color:white}.contact p{color:#b5c4d9;max-width:620px}.contact-links{display:grid;gap:10px}.contact-link{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 17px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);transition:.2s}.contact-link:hover{background:rgba(255,255,255,.08)}.contact-link span{display:block;color:#7f96b6;font:10px "DM Mono",monospace}.contact-link b{display:block;margin-top:4px;font-size:13px;word-break:break-word}.contact-link svg{color:var(--cyan);flex:0 0 auto}
+    footer{background:#06101e;color:#8da0ba;border-top:1px solid rgba(255,255,255,.06)}.footer-row{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12px}.footer-row .brand{font-size:13px}
+
+    @media(max-width:920px){.hero-grid,.about-grid,.skill-grid,.contact-grid{grid-template-columns:1fr}.dev-card{max-width:620px}.proof-grid{grid-template-columns:1fr 1fr;padding:22px 0}.project{grid-template-columns:1fr}.project-visual{min-height:285px}.workflow-grid{grid-template-columns:1fr 1fr}.section-head{align-items:flex-start;flex-direction:column;gap:12px}}
+    @media(max-width:680px){.container{width:min(calc(100% - 28px),var(--max))}.nav{height:68px}.menu-toggle{display:block}.nav-links{position:fixed;display:none;left:14px;right:14px;top:75px;flex-direction:column;align-items:stretch;padding:15px;border-radius:16px;background:#0c1a2f;border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow)}.nav-links.open{display:flex}.nav-links a{padding:8px}.nav-cta{text-align:center}.hero{padding:62px 0}.hero-grid{gap:40px}h1{font-size:44px}.terminal{min-height:390px}.stack-float{display:none}.proof-grid{grid-template-columns:1fr 1fr;gap:12px}.proof-item{align-items:flex-start}.proof-value{font-size:15px}.proof-label{font-size:10px}section{padding:72px 0}.project-copy{padding:28px}.project-visual h3{font-size:24px}.float-tags{top:auto;bottom:112px}.skill-columns,.mini-grid,.workflow-grid{grid-template-columns:1fr}.footer-row{padding:20px 0;flex-direction:column;justify-content:center;text-align:center}.contact{padding:70px 0}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Mohamed Abdelhalim home"><span class="brand-mark">MA</span><span>Mohamed Abdelhalim</span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="menu"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <nav class="nav-links" id="menu" aria-label="Primary navigation">
+        <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact" class="nav-cta">Contact me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><i></i> Open to junior opportunities</span>
+          <h1>Full Stack .NET apps, <span class="accent">built end to end.</span></h1>
+          <p class="hero-copy">I’m Mohamed Abdelhalim Ramadan Abdelhalim, an entry-level Full Stack .NET Developer and BIS student graduating in 2026. I build API-driven web applications with ASP.NET Core, C#, React.js, SQL Server, Entity Framework Core, authentication, authorization, and responsive interfaces.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore my projects <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="assets/Mohamed_Abdelhalim_Full_Stack_CV_ATS.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-note"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Giza, Egypt · Full Stack .NET Developer</div>
+        </div>
+        <aside class="dev-card" aria-label="Developer stack preview">
+          <div class="terminal">
+            <div class="terminal-top"><div class="dots"><i></i><i></i><i></i></div><span>portfolio.cs</span></div>
+            <div class="code"><span class="k">public class</span> <span class="v">Developer</span>
+{
+  <span class="k">public string</span> Name = <span class="s">"Mohamed Abdelhalim"</span>;
+  <span class="k">public string</span> Role = <span class="s">"Full Stack .NET"</span>;
+
+  <span class="c">// Backend</span>
+  Stack.Add(<span class="s">"ASP.NET Core Web API"</span>);
+  Stack.Add(<span class="s">"Entity Framework Core"</span>);
+
+  <span class="c">// Frontend</span>
+  Stack.Add(<span class="s">"React.js"</span>);
+  Stack.Add(<span class="s">"JavaScript"</span>);
+}</div>
+            <div class="stack-float"><span>C#</span><span>.NET</span><span>React</span><span>SQL Server</span></div>
+            <div class="code-name"><strong>Mohamed Abdelhalim</strong><span>ASP.NET Core · React.js · SQL Server</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="proof" aria-label="Key highlights"><div class="container proof-grid">
+      <div class="proof-item"><span class="proof-icon">&lt;/&gt;</span><span><strong class="proof-value">3 Portfolio Projects</strong><small class="proof-label">API, MVC & full-stack systems</small></span></div>
+      <div class="proof-item"><span class="proof-icon">API</span><span><strong class="proof-value">REST APIs</strong><small class="proof-label">JWT · Identity · Swagger</small></span></div>
+      <div class="proof-item"><span class="proof-icon">DB</span><span><strong class="proof-value">SQL Server</strong><small class="proof-label">EF Core · LINQ · CRUD</small></span></div>
+      <div class="proof-item"><span class="proof-icon">26</span><span><strong class="proof-value">Graduating 2026</strong><small class="proof-label">Business Information Systems</small></span></div>
+    </div></section>
+
+    <section class="about" id="about"><div class="container">
+      <div class="section-head"><div><span class="section-kicker">About me</span><h2>Backend logic + frontend experience.</h2></div><p class="section-lead">My focus is building maintainable web applications where the API, database, security, and user interface work together cleanly.</p></div>
+      <div class="about-grid">
+        <article class="about-card"><p>Entry-level Full Stack .NET Developer with hands-on project experience using ASP.NET Core, C#, React.js, JavaScript, SQL Server, Entity Framework Core, and RESTful APIs. Trained in full-stack web development at Route Academy, with experience building authentication and authorization, database-backed systems, API integrations, and responsive web interfaces.</p></article>
+        <aside class="availability-card"><h3>Ready for a junior development role.</h3><p>I’m looking for an opportunity to contribute to production software, learn from an experienced development team, and continue growing across the .NET ecosystem.</p><div class="mini-grid"><div class="mini"><span>Location</span><b>Giza, Egypt</b></div><div class="mini"><span>Education</span><b>BIS · 2026</b></div><div class="mini"><span>Training</span><b>Route Academy</b></div><div class="mini"><span>Languages</span><b>Arabic · English</b></div></div></aside>
+      </div>
+    </div></section>
+
+    <section class="projects" id="projects"><div class="container">
+      <div class="section-head"><div><span class="section-kicker">Selected projects</span><h2>Projects built around real workflows.</h2></div><p class="section-lead">These projects demonstrate API design, frontend integration, role-based security, SQL-backed data, and practical CRUD workflows.</p></div>
+      <div class="project-list">
+        <article class="project">
+          <div class="project-visual p1"><span class="project-micro">Graduation project · Multi-role platform</span><h3>Consumers, restaurants, delivery partners and admins in one workflow.</h3><div class="float-tags"><span>JWT</span><span>Roles</span><span>React</span></div><div class="visual-code"><b>POST</b> /api/Authentication/Login<br><b>POST</b> /api/FoodItems/Request<br><em>Admin → Approve / Reject</em></div></div>
+          <div class="project-copy"><span class="project-index">01 / GRADUATION PROJECT</span><h3>Save and Serve</h3><p>A multi-role full-stack platform connecting consumers, restaurants, delivery partners, and administrators.</p><ul class="project-points"><li>Developed RESTful APIs with ASP.NET Core Web API and integrated the React frontend using Axios.</li><li>Implemented authentication and role-based authorization with ASP.NET Core Identity and JWT.</li><li>Created administrator-controlled approval workflows for restaurant food-item requests and delivery-partner order requests.</li><li>Used Entity Framework Core and SQL Server for persistence, with Swagger and Postman for API testing.</li></ul><div class="stack"><span>ASP.NET Core Web API</span><span>React.js</span><span>SQL Server</span><span>EF Core</span><span>JWT</span><span>Identity</span><span>Axios</span></div></div>
+        </article>
+
+        <article class="project">
+          <div class="project-visual p2"><span class="project-micro">API-driven commerce</span><h3>Products, categories, carts and orders connected through a clean API.</h3><div class="float-tags"><span>CRUD</span><span>Cart</span><span>Orders</span></div><div class="visual-code"><b>GET</b> /api/products<br><b>POST</b> /api/cart/items<br><b>POST</b> /api/orders<br><em>Protected endpoints</em></div></div>
+          <div class="project-copy"><span class="project-index">02 / WEB APPLICATION</span><h3>E-Commerce Web Application</h3><p>An API-driven e-commerce application for products, categories, users, shopping carts, and orders.</p><ul class="project-points"><li>Implemented CRUD operations and database access using Entity Framework Core.</li><li>Protected API endpoints and integrated frontend experiences with backend services.</li><li>Designed responsive product and cart interfaces and tested REST endpoints with Swagger and Postman.</li></ul><div class="stack"><span>ASP.NET Core Web API</span><span>React.js</span><span>EF Core</span><span>SQL Server</span><span>Swagger</span><span>Postman</span></div></div>
+        </article>
+
+        <article class="project">
+          <div class="project-visual p3"><span class="project-micro">Healthcare management · MVC</span><h3>Patient records, appointments, visits and prescriptions in one clinic system.</h3><div class="float-tags"><span>MVC</span><span>Patients</span><span>Visits</span></div><div class="visual-code"><b>Patient</b> → Appointments<br><b>Visit</b> → Examinations<br><b>Doctor</b> → Prescription<br><em>Medical history</em></div></div>
+          <div class="project-copy"><span class="project-index">03 / CLINIC SYSTEM</span><h3>Cardiology Clinic Management System</h3><p>A clinic management application for patient records, appointments, visits, medical examinations, prescriptions, and patient history.</p><ul class="project-points"><li>Applied ASP.NET Core MVC architecture with Entity Framework Core and SQL Server.</li><li>Implemented core CRUD workflows for common medical and administrative records.</li><li>Created responsive interfaces to support cardiology clinic administrative and medical workflows.</li></ul><div class="stack"><span>ASP.NET Core MVC</span><span>C#</span><span>EF Core</span><span>SQL Server</span><span>CRUD</span><span>Responsive UI</span></div></div>
+        </article>
+      </div>
+    </div></section>
+
+    <section class="skills" id="skills"><div class="container">
+      <div class="section-head"><div><span class="section-kicker">Skills & learning</span><h2>A practical full-stack toolkit.</h2></div><p class="section-lead">My current stack covers backend APIs, frontend development, relational databases, security, testing tools, version control, and software fundamentals.</p></div>
+      <div class="skill-grid">
+        <div class="education-board">
+          <article class="edu-card"><span class="tag">Education</span><h3>Bachelor’s Degree in Business Information Systems (BIS)</h3><p>Expected Graduation: 2026</p></article>
+          <article class="edu-card"><span class="tag">Training</span><h3>Full Stack Web Development · Route Academy</h3><p>.NET, C#, ASP.NET Core, Web API, EF Core, SQL Server, JavaScript, React.js, Git/GitHub</p></article>
+          <article class="edu-card"><span class="tag">Languages</span><h3>Arabic & English</h3><p>Arabic: Native · English: Good</p></article>
+        </div>
+        <div class="skill-board"><h3>Core technologies</h3><div class="skill-columns">
+          <div class="skill-group"><b>Backend & APIs</b><div><span>C#</span><span>.NET</span><span>ASP.NET Core</span><span>Web API</span><span>MVC</span><span>RESTful APIs</span><span>LINQ</span></div></div>
+          <div class="skill-group"><b>Frontend</b><div><span>React.js</span><span>JavaScript ES6+</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>Responsive Design</span><span>Axios</span></div></div>
+          <div class="skill-group"><b>Database & data</b><div><span>SQL Server</span><span>SQL</span><span>Entity Framework Core</span><span>Relational Design</span><span>CRUD</span></div></div>
+          <div class="skill-group"><b>Security & tools</b><div><span>ASP.NET Identity</span><span>JWT</span><span>Role Authorization</span><span>Swagger / OpenAPI</span><span>Postman</span><span>Git</span><span>GitHub</span><span>Visual Studio</span><span>VS Code</span></div></div>
+        </div></div>
+      </div>
+    </div></section>
+
+    <section class="workflow"><div class="container"><div class="section-head"><div><span class="section-kicker">How I build</span><h2>From database to responsive UI.</h2></div><p class="section-lead">A simple workflow that keeps the application layers clear and testable.</p></div><div class="workflow-grid">
+      <article class="flow-card"><span class="flow-no">01</span><h3>Model the data</h3><p>Define entities, relationships, and SQL Server persistence with Entity Framework Core.</p></article>
+      <article class="flow-card"><span class="flow-no">02</span><h3>Build the API</h3><p>Create RESTful endpoints, validation, business rules, authentication, and authorization.</p></article>
+      <article class="flow-card"><span class="flow-no">03</span><h3>Connect React</h3><p>Integrate frontend views using Axios, route data through components, and handle user states.</p></article>
+      <article class="flow-card"><span class="flow-no">04</span><h3>Test & refine</h3><p>Use Swagger and Postman, debug edge cases, and improve responsive behavior and UX.</p></article>
+    </div></div></section>
+
+    <section class="contact" id="contact"><div class="container contact-grid">
+      <div><span class="section-kicker" style="color:var(--cyan)">Get in touch</span><h2>Looking for a junior Full Stack .NET Developer?</h2><p>I’m open to junior .NET opportunities where I can contribute to real products, work with a development team, and grow through production experience.</p><div class="hero-actions"><a class="btn btn-primary" href="mailto:mahamedhalemramadan@gmail.com">Send email <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="assets/Mohamed_Abdelhalim_Full_Stack_CV_ATS.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div></div>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:mahamedhalemramadan@gmail.com"><div><span>EMAIL</span><b>mahamedhalemramadan@gmail.com</b></div><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="contact-link" href="tel:+201119187839"><div><span>PHONE</span><b>01119187839</b></div><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="contact-link" href="#projects"><div><span>PORTFOLIO</span><b>View selected projects</b></div><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div></section>
+  </main>
+
+  <footer><div class="container footer-row"><a class="brand" href="#top"><span class="brand-mark">MA</span><span>Mohamed Abdelhalim</span></a><span>© <span id="year"></span> · Full Stack .NET Developer · Giza, Egypt</span></div></footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click',()=>{ const open=menu.classList.toggle('open'); btn.setAttribute('aria-expanded',String(open)); });
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}));
+  </script>
+</body>
+</html>
